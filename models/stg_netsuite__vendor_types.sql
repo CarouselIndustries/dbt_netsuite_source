@@ -36,7 +36,8 @@ final as (
     select 
         vendor_type_id,
         name,
-        _fivetran_deleted
+        _fivetran_deleted,
+        _fivetran_synced
 
         --The below script allows for pass through columns.
         {% if var('vendor_types_pass_through_columns') %}

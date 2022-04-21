@@ -40,7 +40,8 @@ final as (
         full_name,
         name,
         parent_id,
-        _fivetran_deleted
+        _fivetran_deleted,
+        _fivetran_synced
 
         --The below script allows for pass through columns.
         {% if var('subsidiaries_pass_through_columns') %}

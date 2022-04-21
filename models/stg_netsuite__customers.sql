@@ -44,7 +44,8 @@ final as (
         zipcode,
         country,
         date_first_order as date_first_order_at,
-        _fivetran_deleted
+        _fivetran_deleted,
+        _fivetran_synced
 
         --The below script allows for pass through columns.
         {% if var('customers_pass_through_columns') %}

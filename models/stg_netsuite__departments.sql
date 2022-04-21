@@ -39,7 +39,8 @@ final as (
         department_id,
         name,
         full_name,
-        _fivetran_deleted
+        _fivetran_deleted,
+        _fivetran_synced
 
         --The below script allows for pass through columns.
         {% if var('departments_pass_through_columns') %}

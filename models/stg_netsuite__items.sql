@@ -38,7 +38,8 @@ final as (
         name,
         type_name,
         salesdescription as sales_description,
-        _fivetran_deleted
+        _fivetran_deleted,
+        _fivetran_synced
 
         --The below script allows for pass through columns.
         {% if var('items_pass_through_columns') %}

@@ -43,7 +43,8 @@ final as (
         general_rate_type,
         is_leftside,
         is_balancesheet,
-        _fivetran_deleted
+        _fivetran_deleted,
+        _fivetran_synced
 
         --The below script allows for pass through columns.
         {% if var('accounts_pass_through_columns') %}

@@ -37,7 +37,8 @@ final as (
         currency_id,
         name,
         symbol,
-        _fivetran_deleted
+        _fivetran_deleted,
+        _fivetran_synced
 
         --The below script allows for pass through columns.
         {% if var('currencies_pass_through_columns') %}

@@ -37,7 +37,8 @@ final as (
     select 
         accounting_book_id,
         is_primary,
-        _fivetran_deleted
+        _fivetran_deleted,
+        _fivetran_synced
 
         --The below script allows for pass through columns.
         {% if var('accounting_books_pass_through_columns') %}

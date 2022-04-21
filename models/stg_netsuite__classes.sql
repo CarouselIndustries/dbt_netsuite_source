@@ -38,7 +38,8 @@ final as (
     select 
         class_id,
         full_name,
-        _fivetran_deleted
+        _fivetran_deleted,
+        _fivetran_synced
 
         --The below script allows for pass through columns.
         {% if var('classes_pass_through_columns') %}

@@ -41,7 +41,8 @@ final as (
         full_name,
         city,
         country,
-        _fivetran_deleted
+        _fivetran_deleted,
+        _fivetran_synced
 
         --The below script allows for pass through columns.
         {% if var('locations_pass_through_columns') %}

@@ -39,7 +39,8 @@ final as (
         companyname as company_name,
         create_date as create_date_at,
         vendor_type_id,
-        _fivetran_deleted
+        _fivetran_deleted,
+        _fivetran_synced
 
         --The below script allows for pass through columns.
         {% if var('vendors_pass_through_columns') %}

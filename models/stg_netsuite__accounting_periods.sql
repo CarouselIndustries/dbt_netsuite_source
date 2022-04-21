@@ -46,7 +46,8 @@ final as (
         year_0,
         is_adjustment,
         closed,
-        _fivetran_deleted
+        _fivetran_deleted,
+        _fivetran_synced
 
         --The below script allows for pass through columns.
         {% if var('accounting_periods_pass_through_columns') %}

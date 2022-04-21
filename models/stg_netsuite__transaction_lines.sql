@@ -47,7 +47,9 @@ final as (
         class_id,
         location_id,
         department_id,
-        memo
+        memo,
+        _fivetran_deleted,
+        _fivetran_synced
 
         --The below script allows for pass through columns.
         {% if var('transaction_lines_pass_through_columns') %}
