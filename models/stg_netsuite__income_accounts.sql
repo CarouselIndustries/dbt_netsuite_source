@@ -22,7 +22,12 @@ fields as (
                 staging_columns=get_income_accounts_columns()
             )
         }}
-        
+        --The below script allows for pass through columns.
+        {% if var('income_accounts_pass_through_columns') %}
+        ,
+        {{ var('income_accounts_pass_through_columns') | join (", ")}}
+
+        {% endif %}
     from base
 ),
 
@@ -34,6 +39,13 @@ final as (
         parent_id,
         account_number,
         _fivetran_deleted
+
+        --The below script allows for pass through columns.
+        {% if var('income_accounts_pass_through_columns') %}
+        ,
+        {{ var('income_accounts_pass_through_columns') | join (", ")}}
+
+        {% endif %}
 
     from fields
 )

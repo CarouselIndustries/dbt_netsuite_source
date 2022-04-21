@@ -22,7 +22,12 @@ fields as (
                 staging_columns=get_items_columns()
             )
         }}
-        
+        --The below script allows for pass through columns.
+        {% if var('items_pass_through_columns') %}
+        ,
+        {{ var('items_pass_through_columns') | join (", ")}}
+
+        {% endif %}
     from base
 ),
 
@@ -35,6 +40,12 @@ final as (
         salesdescription as sales_description,
         _fivetran_deleted
 
+        --The below script allows for pass through columns.
+        {% if var('items_pass_through_columns') %}
+        ,
+        {{ var('items_pass_through_columns') | join (", ")}}
+
+        {% endif %}
     from fields
 )
 

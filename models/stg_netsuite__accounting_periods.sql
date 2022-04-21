@@ -22,6 +22,12 @@ fields as (
                 staging_columns=get_accounting_periods_columns()
             )
         }}
+        --The below script allows for pass through columns.
+        {% if var('accounting_periods_pass_through_columns') %}
+        ,
+        {{ var('accounting_periods_pass_through_columns') | join (", ")}}
+
+        {% endif %}
         
     from base
 ),
@@ -41,6 +47,13 @@ final as (
         is_adjustment,
         closed,
         _fivetran_deleted
+
+        --The below script allows for pass through columns.
+        {% if var('accounting_periods_pass_through_columns') %}
+        ,
+        {{ var('accounting_periods_pass_through_columns') | join (", ")}}
+
+        {% endif %}
 
     from fields
 )
