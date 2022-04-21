@@ -36,7 +36,7 @@ vars:
     accounts_pass_through_columns: []
     classes_pass_through_columns: []
     consolidated_exchange_rates_pass_through_columns: []
-    currencies_pass_through_columns: []:
+    currencies_pass_through_columns: []
     customers_pass_through_columns: []
     departments_pass_through_columns: []
     expense_accounts_pass_through_columns: []
