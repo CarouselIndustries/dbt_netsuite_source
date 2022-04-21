@@ -1,6 +1,8 @@
 {% macro get_transaction_lines_columns() %}
 
 {% set columns = [
+    {"name": "_fivetran_deleted", "datatype": "boolean"},
+    {"name": "_fivetran_synced", "datatype": dbt_utils.type_timestamp()},
     {"name": "account_id", "datatype": dbt_utils.type_float()},
     {"name": "amount", "datatype": dbt_utils.type_float()},
     {"name": "class_id", "datatype": dbt_utils.type_float()},
