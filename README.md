@@ -71,15 +71,25 @@ This package includes all source columns defined in the macros folder. To add ad
 ...
 vars:
   netsuite_source:
+    accounting_books_pass_through_columns: ['field1', 'field2']
+    accounting_periods_pass_through_columns: ['field1', 'field2']
     accounts_pass_through_columns: ['new_custom_field', 'we_can_account_for_that']
     classes_pass_through_columns: ['class_is_in_session', 'pass_through_additional_fields_here']
-    departments_pass_through_columns: ['department_custom_fields']
-    transactions_pass_through_columns: ['transactions_can_be_custom','pass_this_transaction_field_on']
-    transaction_lines_pass_through_columns: ['transaction_lines_field']
-    customers_pass_through_columns: ['customers_field']
-    locations_pass_through_columns: ['this_new_location','lets_also_add_this_location_field']
-    subsidiaries_pass_through_columns: ['subsidiaries_field']
     consolidated_exchange_rates_pass_through_columns: ['this_exchange_rate','that_exchange_rate']
+    currencies_pass_through_columns: ['field1', 'field2']
+    customers_pass_through_columns: ['customers_field']
+    departments_pass_through_columns: ['department_custom_fields']
+    expense_accounts_pass_through_columns: ['field1', 'field2']
+    income_accounts_pass_through_columns: ['field1', 'field2']
+    items_pass_through_columns: ['field1', 'field2']
+    locations_pass_through_columns: ['this_new_location','lets_also_add_this_location_field']
+    partners_pass_through_columns: ['field1', 'field2']
+    subsidiaries_pass_through_columns: ['subsidiaries_field']
+    transaction_lines_pass_through_columns: ['transaction_lines_field']
+    transactions_pass_through_columns: ['transactions_can_be_custom','pass_this_transaction_field_on']
+    vendor_types_pass_through_columns: ['field1', 'field2']
+    vendors_pass_through_columns: ['field1', 'field2']
+
 ```
 
 ### Changing the Build Schema
