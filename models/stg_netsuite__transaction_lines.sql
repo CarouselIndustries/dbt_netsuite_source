@@ -26,7 +26,7 @@ fields as (
         --The below script allows for pass through columns.
         {% if var('transaction_lines_pass_through_columns') %}
         ,
-        {{ var('transaction_lines_pass_through_columns') | join (", ")}}
+        {{ var("transaction_lines_pass_through_columns") | join (", ")}}
 
         {% endif %}
         
